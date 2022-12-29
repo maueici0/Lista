@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alata', sans-serif;
+    font-size: 1rem;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+}
+
+#container {
+    background-color: aqua;
+    width: 800px;
+    padding: 30px 50px;
+    display: grid;
+    grid-template: "input input input" "tabela tabela tabela" "tabela tabela tabela";
+}
+
+

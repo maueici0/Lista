@@ -1,0 +1,70 @@
+#tabela-area {
+    grid-area: tabela;
+    height: 500px;
+    max-height: 500px;
+    overflow: auto;
+    scrollbar-width: thin;
+    background-color: antiquewhite;
+}
+
+#tabela {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.coluna-status {
+    width: 60px;
+    text-align: center;
+}
+
+.coluna-nome,
+.coluna-preco {
+    width: 200px;
+    text-align: left;
+}
+
+.coluna-acao {
+    width: 150px;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    padding: 8px 5px 8px 5px;
+    background-color: antiquewhite;
+    box-shadow: 0px 1px 0px black;
+}
+
+td {
+    padding: 5px;
+}
+
+tr {
+    border-bottom: 1px solid black;
+    height: 5px;
+    vertical-align: middle;
+}
+
+tr:last-child,
+tr:first-child {
+    border-bottom: none;
+}
+
+#remover {
+    border: 1px solid black;
+    background: none;
+    padding: 2px;
+    width: 100%;
+}
+
+#remover:hover {
+    cursor: pointer;
+}
+
+.completo {
+    background-color: green;
+}
+
+.incompleto {
+    background-color: red;
+}

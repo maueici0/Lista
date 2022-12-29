@@ -1,0 +1,24 @@
+#input-area {
+    grid-area: input;
+    height: 50px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+#campo-nome,
+#campo-preco,
+#botao {
+    width: 33.33%;
+    height: 20px;
+    padding: 5px;
+    box-sizing: content-box;
+    border-radius: 0;
+    border: 1px solid gray;
+}
+
+#campo-preco {
+    appearance: textfield;
+}
