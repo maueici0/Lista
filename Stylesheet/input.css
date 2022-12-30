@@ -11,12 +11,26 @@
 #campo-nome,
 #campo-preco,
 #botao {
+    font-weight: bold;
     width: 33.33%;
     height: 20px;
     padding: 5px;
     box-sizing: content-box;
     border-radius: 0;
-    border: 1px solid gray;
+    border: none;
+    background-color: #6B917E;
+}
+
+#campo-nome:focus,#campo-preco:focus{
+    outline:1px solid #354F52;
+}
+#botao {
+    transition: 0.3s;
+}
+#botao:hover{
+    opacity: 70%;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 #campo-preco {

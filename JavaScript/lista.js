@@ -1,31 +1,33 @@
 export function listarItens() {
     let itens = [];
     criarHeader(itens);
-    const lista = Array.from(JSON.parse(localStorage.getItem("produto")));
-    for (let item of lista) {
+    if (localStorage.getItem("produto")) {
+        const lista = Array.from(JSON.parse(localStorage.getItem("produto")));
+        for (let item of lista) {
 
-        const itemNode = criarItem(item);
+            const itemNode = criarItem(item);
 
-        const checkbox = itemNode.childNodes.item(0).childNodes.item(0);
-        checkbox.addEventListener("change", () => {
-            if (checkbox.checked) {
-                item.status = true;
-                itemNode.className = "completo";
-            }
-            else {
-                item.status = false;
-                itemNode.className = "incompleto";
-            }
-            concluirItem(item);
-        });
+            const checkbox = itemNode.childNodes.item(0).childNodes.item(0);
+            checkbox.addEventListener("change", () => {
+                if (checkbox.checked) {
+                    item.status = true;
+                    itemNode.className = "completo";
+                }
+                else {
+                    item.status = false;
+                    itemNode.className = "incompleto";
+                }
+                concluirItem(item);
+            });
 
-        const botaoRemover = itemNode.childNodes.item(3).childNodes.item(0);
-        botaoRemover.addEventListener("click", () => {
-            removerItem(item);
-            tabela.removeChild(itemNode);
-        });
+            const botaoRemover = itemNode.childNodes.item(3).childNodes.item(0);
+            botaoRemover.addEventListener("click", () => {
+                removerItem(item);
+                tabela.removeChild(itemNode);
+            });
 
-        itens.push(itemNode);
+            itens.push(itemNode);
+        }
     }
     const tabela = document.querySelector("#tabela");
     tabela.replaceChildren(...itens);

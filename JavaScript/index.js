@@ -20,8 +20,8 @@ let id = 0;
 window.addEventListener("load", () => {
     inputNome.value='';
     inputPreco.value='';
+    listarItens();
     if (localStorage.getItem("produto")) {
-        listarItens();
         const array = Array.from(JSON.parse(localStorage.getItem("produto")));
         id = array[array.length - 1].id + 1;
     }
